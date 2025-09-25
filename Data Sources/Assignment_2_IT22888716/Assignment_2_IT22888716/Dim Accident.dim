@@ -1,0 +1,329 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5eb94ec4-0560-4930-96c1-dab23f5226dd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Accident</ID>
+  <Name>Dim Accident</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1885" scrolltop="-2991" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7726" y="16320" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimAccident" left="20" top="5787" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3471" height="4106" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00008f0d00000a100000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimAccident" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimLocation" left="255" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00003b0d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimLocation" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="1356" top="2888" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DimAccident-DimLocation]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1755" y="3387" />
+              <point x="1755" y="5787" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1885</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-2991</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f38fee2d-0932-482f-ac66-6a7310b9e0ce">
+    <DataSourceViewID>DSV_Assignment_Aviation_DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="d66961b0-d9ac-4e87-a4fb-6f6e361925d6">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="89960bb5-6d97-475b-a1eb-1a274a8d0a61">
+      <ID>Accident SK</ID>
+      <Name>Accident SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a8c63de-b7da-42c0-a349-f2e1e9fc1691">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="851b853b-1a54-48ad-b202-39dfcf2cb443">
+            <TableID>dbo_DimAccident</TableID>
+            <ColumnID>AccidentSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0b778ca6-f3dc-4251-a15c-a89c4f9acaff">
+          <AttributeID>Location ID</AttributeID>
+          <Name>Location ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c3d50e80-dbf7-4a56-b599-6e8d60ccf2e0">
+          <AttributeID>Location SK</AttributeID>
+          <Name>Location SK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a7e7b9aa-f32b-4ef0-951f-1012bb7c136d">
+          <AttributeID>Location</AttributeID>
+          <Name>Location</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a960019a-8c56-4995-870a-17799b835ae8">
+          <AttributeID>City</AttributeID>
+          <Name>City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fa43e29d-7b7d-4379-91e1-8a54498a3829">
+          <AttributeID>Country</AttributeID>
+          <Name>Country</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d4cb17b3-cfca-401a-8544-83923a25a80f">
+          <AttributeID>Accident Number</AttributeID>
+          <Name>Accident Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="45c00e55-93eb-4440-ba2b-ceb52219d53d">
+          <AttributeID>Date</AttributeID>
+          <Name>Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e7ed82cd-dec2-4a56-aba3-bbe011aa18ac">
+          <AttributeID>Weather Condition</AttributeID>
+          <Name>Weather Condition</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6a4b935f-770c-4094-9d66-52fc4c8e79cc">
+          <AttributeID>Injury Severity</AttributeID>
+          <Name>Injury Severity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="423e7702-5349-4e9c-b69b-8ecc4716f564">
+          <AttributeID>Aircraft Damage</AttributeID>
+          <Name>Aircraft Damage</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c895ea45-7ecb-4677-bc85-32f110a5a1df">
+      <ID>Location ID</ID>
+      <Name>Location ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f72e2ccc-a718-4723-a785-6e97cf473aca">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f17d3de7-9417-414c-8963-91bb41a4873a">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>LocationID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c82d4112-7290-4f13-bd94-c79e03d10022">
+      <ID>Location SK</ID>
+      <Name>Location SK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="51ead9e2-3ad7-4c86-8c5e-5f64bc122a92">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8b03741-aff2-41b6-bfbe-1b9d92aefab7">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>LocationSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5f63c7bf-7001-40e1-adf9-1b08f11eedba">
+      <ID>Location</ID>
+      <Name>Location</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="16fff6b2-a310-4e9a-a01b-8fb2ff841e5c">
+          <DataType>WChar</DataType>
+          <DataSize>200</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4dd0f31f-39e4-43de-87dd-db21a1bfb422">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Location</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e3a95aec-7733-4453-92d8-35710c9ec1ae">
+      <ID>City</ID>
+      <Name>City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bfe62dd5-aff9-4a7f-8e4e-b8787df2e9cb">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4c6a4c5-40d7-4c7f-95d2-c0b3269cd84d">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>City</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5184b5d0-86e3-42e1-96a8-faa07e962498">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9358a3c-2566-4163-8261-b85c01e6415d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="17a1ae11-f8d8-48b5-bbb7-b98f5d47ebec">
+            <TableID>dbo_DimLocation</TableID>
+            <ColumnID>Country</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="33c5cddb-ebe3-41c2-b115-7db17de14cb7">
+      <ID>Accident Number</ID>
+      <Name>Accident Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df919e5c-b79e-4e34-af23-d09828931a49">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="237dbf8b-46ed-4a30-b3f6-0e3cc9ec5f0e">
+            <TableID>dbo_DimAccident</TableID>
+            <ColumnID>AccidentNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2511952f-b7ac-49c2-b456-0f6b109b563e">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad6b2b1e-02d5-4df1-ba26-dbb424afd8ac">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8396a42-0f61-491c-87aa-d95a1618eb9c">
+            <TableID>dbo_DimAccident</TableID>
+            <ColumnID>Date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="20a6e3dd-7cb4-49d5-9741-c75713630f70">
+      <ID>Weather Condition</ID>
+      <Name>Weather Condition</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c8fa921-86a7-473c-b739-c17533923362">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c7c31ab2-5cde-41a1-84a4-fb4a742f6324">
+            <TableID>dbo_DimAccident</TableID>
+            <ColumnID>WeatherCondition</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0f888772-a7a8-45a3-9b03-7a3afbdb870d">
+      <ID>Injury Severity</ID>
+      <Name>Injury Severity</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4816860e-8faf-4b6e-bec6-2abaf901ef10">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53c904e2-1488-4632-963f-9c8fb8f4429a">
+            <TableID>dbo_DimAccident</TableID>
+            <ColumnID>InjurySeverity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="32036112-9ab6-4fee-9634-f0a4a926e483">
+      <ID>Aircraft Damage</ID>
+      <Name>Aircraft Damage</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b8f1057d-9e61-4e65-8131-35de2bb1db09">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="972ccac5-cbdb-479f-a0fb-b5452de2cb59">
+            <TableID>dbo_DimAccident</TableID>
+            <ColumnID>AircraftDamage</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

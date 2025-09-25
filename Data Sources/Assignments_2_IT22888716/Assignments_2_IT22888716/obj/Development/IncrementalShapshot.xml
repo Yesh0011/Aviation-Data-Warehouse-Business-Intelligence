@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Assignments_2_IT22888716</Database>
+    <Server>localhost\SSAS_MULTIDIM</Server>
+    <ConnectionString>Data Source=localhost\SSAS_MULTIDIM;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>LSKGyBYo3d8xEflYCjIhh1Q+4sA=5/10/2025 10:13:47 AM5/10/2025 10:13:47 AM</TimeStamp>
+        <ID>
+          <String>Airline DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>+FyIzORJosCyzQ9XWLjRX5qX2Cc=5/10/2025 10:25:08 AM5/10/2025 10:15:19 AM</TimeStamp>
+        <ID>
+          <String>Airline DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KxuE9+3eUn8YI8agA0TsyW5K8oQ=5/10/2025 10:28:29 AM5/10/2025 10:25:08 AM</TimeStamp>
+        <ID>
+          <String>Dim Pilots</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>YQxFBQcP7PVBeCjQBRdvQGl9qGM=5/10/2025 10:29:51 AM5/10/2025 10:25:08 AM</TimeStamp>
+        <ID>
+          <String>Dim Aircraft</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Wu6ezTXJJ1tnzcc1kbUa5kuwMjk=5/10/2025 10:30:39 AM5/10/2025 10:25:08 AM</TimeStamp>
+        <ID>
+          <String>Dim Accident</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>C+LK6h4C1D4zgVFQ4y9FFfq7kbI=5/10/2025 10:31:20 AM5/10/2025 10:25:08 AM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>Yl34L/k3sVoztSPRdgW3og9CrUk=5/10/2025 12:19:24 PM5/10/2025 12:19:05 PM4Kk065DMsIwImdZ1zZD9LHH1ptM=5/10/2025 12:19:05 PM5/10/2025 12:19:05 PM</TimeStamp>
+        <ID>
+          <String>DSV_Assignment_Aviation_DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>eTx0LJ6FjtGEwEsNVQC++kqSrVU=5/10/2025 10:10:41 AM5/10/2025 10:10:41 AM</TimeStamp>
+      <ID>
+        <String>Assignments_2_IT22888716</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>false</ProcessingComplete>
+  <LastDeployed>2025-05-10T08:22:19.34Z</LastDeployed>
+</DeploymentSnapshot>

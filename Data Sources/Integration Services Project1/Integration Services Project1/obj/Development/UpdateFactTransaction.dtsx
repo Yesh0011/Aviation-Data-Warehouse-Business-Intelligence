@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/10/2025 3:40:28 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LEON"
+  DTS:CreatorName="LEON\ASUS"
+  DTS:DTSID="{A3D8B528-A574-4950-A4E9-19302F3CD77E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{D097E9B7-C467-466B-A00A-5A538A62AC45}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LEON\SQLEXPRESS02.Airline_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{62C08BCA-E733-4B09-9D07-16E06941F0D9}"
+      DTS:ObjectName="LEON\SQLEXPRESS02.Airline_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LEON\SQLEXPRESS02;Initial Catalog=Airline_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{62C08BCA-E733-4B09-9D07-16E06941F0D9}LEON\SQLEXPRESS02.Airline_DW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Update Fact Transactions"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{77DFC20F-B2D6-4F2B-AC3B-9858BBB23280}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Fact Transactions"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update Fact Transactions\Read stg_completedTime"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Read stg_completedTime"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgCompletedTime]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Fact Transactions\Read stg_completedTime.Connections[OleDbConnection]"
+                  connectionManagerID="{DC08D39B-897E-4BB8-B211-17D1134FAE9C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LEON_SQLEXPRESS02.Airline_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].Columns[FlightNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].ExternalColumns[FlightNumber]"
+                      length="50"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].Columns[FlightNumber]"
+                      name="FlightNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].ExternalColumns[FlightNumber]"
+                      dataType="wstr"
+                      length="50"
+                      name="FlightNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp2"
+                      name="accm_txn_complete_time"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[FlightNumber]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[FlightNumber]"
+                      name="FlightNumber" />
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Fact Transactions\Update Fact Table"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update Fact Table"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE FactFlight
+SET accm_txn_complete_time = ?
+WHERE FlightNumber = ?
+</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Fact Transactions\Update Fact Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LEON\SQLEXPRESS02.Airline_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LEON\SQLEXPRESS02.Airline_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="accm_txn_complete_time"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input].Columns[FlightNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FlightNumber"
+                      externalMetadataColumnId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output].Columns[FlightNumber]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Fact Transactions\Update Fact Table.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Fact Transactions\Update Fact Table.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Update Fact Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Fact Transactions\Update Fact Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Fact Transactions\Update Fact Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Fact Transactions\Update Fact Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update Fact Transactions.Paths[OLE DB Source Output]"
+              endId="Package\Update Fact Transactions\Update Fact Table.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\Update Fact Transactions\Read stg_completedTime.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Update Fact Transactions"
+          TopLeft="155.000000329954,29.0588235039406" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Update Fact Transactions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Update Fact Transactions\Read stg_completedTime"
+          TopLeft="195.000000415104,23.7058823321621" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Update Fact Transactions\Update Fact Table"
+          TopLeft="199.285714709941,106.588235221726" />
+        <EdgeLayout
+          Id="Package\Update Fact Transactions.Paths[OLE DB Source Output]"
+          TopLeft="293.800000415104,65.3058823321621">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5142857051625,41.2823528895638"
+              Start="0,0"
+              End="-12.5142857051625,33.7823528895638">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6411764447819" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.6411764447819"
+                    Point2="0,20.6411764447819"
+                    Point3="-4,20.6411764447819" />
+                  <mssgle:LineSegment
+                    End="-8.51428570516254,20.6411764447819" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.51428570516254,20.6411764447819"
+                    Point2="-12.5142857051625,20.6411764447819"
+                    Point3="-12.5142857051625,24.6411764447819" />
+                  <mssgle:LineSegment
+                    End="-12.5142857051625,33.7823528895638" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update Fact Transactions\Read stg_completedTime">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LEON_SQLEXPRESS02.Airline_Staging"
+  DTS:DTSID="{DC08D39B-897E-4BB8-B211-17D1134FAE9C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LEON\SQLEXPRESS02;Initial Catalog=Airline_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Integration Services Project1-{DC08D39B-897E-4BB8-B211-17D1134FAE9C}LEON\SQLEXPRESS02.Airline_Staging;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
